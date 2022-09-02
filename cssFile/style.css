@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 :root {
-    --light-grayish-blue: hsl(227, 47%, 96%);
-    --Very-Pale-Blue: hsl(225, 100%, 98%);
-    --Bg-house: hsl(0, 0%, 100%);
-    --Dark-Grayish-Blue: hsl(228, 12%, 44%);
-    --Very-Dark-Blue: hsl(230, 17%, 14%);
-    --Desaturated-Blue: hsl(228, 34%, 66%);
-    --Card-BG-hover: hsl(227, 11%, 84%);
-    --Toogle-Theme: hsl(230, 22%, 74%);
-    --Toogle-Theme-Two: hsl(230, 22%, 75%);
-    --ball: 2rem;
+    --Bg-house: hsl(230, 17%, 14%);
+    --light-grayish-blue: hsl(228, 28%, 20%);
+    --Dark-Grayish-Blue: hsl(228, 34%, 66%);
+    --Very-Pale-Blue: hsl(232, 19%, 15%);
+    --Very-Dark-Blue: #ffffff;
+    --Card-BG-hover: hsl(229, 28%, 30%);
+    --Toogle-Theme: hsl(210, 78%, 56%);
+    --Toogle-Theme-Two: hsl(146, 68%, 55%);
+    --ball: 0.24rem;
+    --for-toogle-text: #ffffff;
 }
 
 
@@ -56,9 +56,12 @@ p{
     background-color: var(--Very-Pale-Blue);
     width: 100%;
     height: 14rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
     -webkit-transition: all 600ms ease-in;
     -o-transition: all 600ms ease-in;
     transition: all 600ms ease-in;
+    box-shadow: 0px 5px 3px var(--Very-Pale-Blue);
 }
 
 .flex-row{
@@ -127,7 +130,10 @@ p{
     flex-wrap: wrap;
     gap: 40px;
     margin-bottom: 2.5rem;
+}
 
+.container-one:hover, .container-two:hover{
+    cursor: pointer;
 }
 
 .container-one-boxes, .container-two-boxes{
@@ -399,16 +405,18 @@ p{
 
 /* dark mode colors */
 
-.dark-mode{
-    --Bg-house: hsl(230, 17%, 14%);
-    --light-grayish-blue: hsl(228, 28%, 20%);
-    --Dark-Grayish-Blue: hsl(228, 34%, 66%);
-    --Very-Pale-Blue: hsl(232, 19%, 15%);
-    --Very-Dark-Blue: #ffffff;
-    --Card-BG-hover: hsl(229, 28%, 30%);
-    --Toogle-Theme: hsl(210, 78%, 56%);
-    --Toogle-Theme-Two: hsl(146, 68%, 55%);
-    --ball: 0.24rem;
+.dark-mode{  
+    --light-grayish-blue: hsl(227, 47%, 96%);
+    --Very-Pale-Blue: hsl(225, 100%, 98%);
+    --Bg-house: hsl(0, 0%, 100%);
+    --Dark-Grayish-Blue: hsl(228, 12%, 44%);
+    --Very-Dark-Blue: hsl(230, 17%, 14%);
+    --Desaturated-Blue: hsl(228, 34%, 66%);
+    --Card-BG-hover: hsl(227, 11%, 84%);
+    --Toogle-Theme: hsl(230, 22%, 74%);
+    --Toogle-Theme-Two: hsl(230, 22%, 75%);
+    --ball: 2rem;
+    --for-toogle-text: hsl(228, 12%, 44%);
     
 }
 
@@ -474,6 +482,7 @@ p{
 
 .toogle p{
     padding: 0.5rem 1rem 0 0;
+    color: var(--for-toogle-text);
 }
 
 #input-color-switch{
@@ -495,6 +504,20 @@ p{
 /* #input-color-switch:checked ~ label .color-switch-toggle{
     transform: translatex(-3rem);
 } */
+
+.attribution{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 14px !important;
+    color: var(--Very-Dark-Blue);
+}
+
+.attribution a{
+    text-decoration: none;
+    -webkit-animation: visible 4s linear;
+}
 
 @keyframes visible {
     0% {

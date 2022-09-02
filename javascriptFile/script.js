@@ -21,9 +21,3 @@ function darkModeOn(){
 function darkModeOff(){
     document.body.classList.remove("dark-mode");
 }
-
-$(document).ready(function(){
-
- AOS.init();
-
-});
